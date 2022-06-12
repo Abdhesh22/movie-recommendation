@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation system</title>
+    <link rel="stylesheet" href="../static/css/index2.css">
+</head>
+<body>
+    <nav class="flex">
+        <div class="nav1 flex space-around">
+            <h1 id="navhead">Movie Recommender</h1>
+        </div>
+    </nav>
+    <form action="/" method="POST" class="searchform flex-col">
+        <h1 class="searchhead">Search Movie</h1>
+        <div class="wrapper">
+            <div class="search-input">
+              <a href="" target="_blank" hidden></a>
+              <input type="text" placeholder="Type to search.." name="name" id="name">
+              <div class="autocom-box">
+                <!-- here list are inserted from javascript -->
+              </div>
+              <div class="icon"><i class="fas fa-search"></i></div>
+            </div>
+        </div>
+        <button type="submit" class="watch submit-btn">Recommend</button>
+    </form>
+    <section class="moviesection">
+        <h1>Similar to <span id="moviename">{{movie}}</span></h1>
+        <div class="flex-movie  g">
+            {% for i in range(0,6) %}
+            <div class="movie-box">
+                <div class="card">
+                    <div class="poster">
+                        <img src={{poster_path[i]}} alt="">
+                    </div>
+                    <div class="details">
+                        <h3>{{movie_name[i]}}</h3>
+                    <div class="tags">
+                        <span class="tag1">
+                            {{genre[i]}}
+                        </span>
+                        <a href={{links[i]}} class="watch">Watch</a>
+                    </div>
+                    <div class="info">
+                        <p>{{overview[i]}}</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    <script src="../static/js/searchbar.js"></script>
+</body>
+</html>

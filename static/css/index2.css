@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=PT+Sans&display=swap');
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #334756;
+    font-family: 'Manrope', sans-serif;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    background-color:#082032;
+    justify-content: space-between;
+    color: #fff;
+    height: 50px;
+    border: 1px solid #03101b;
+}
+.nav1 p{
+    color: #fff;
+}
+.nav2{
+    color: #fff;
+}
+.nav2 a{
+    text-decoration: none;
+    padding: 7px;
+    border: 2px solid #808080;
+    background-color: #c6c6c6;
+    border-radius: 3px 3px;
+    color: #fff;
+}
+.space-around{
+    justify-content: space-around;
+}
+.space-between{
+    justify-content: space-between;
+}
+.nav1{
+    width: 35%;
+}
+.nav2{
+    width: 15%;
+}
+.moviesection{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.moviesection h1,searchhead, h1{
+    color: #EDEDED;
+    text-align: center;
+}
+::selection{
+  color: #fff;
+  background: #000;
+}
+
+.wrapper{
+  max-width: 350px;
+}
+
+.wrapper .search-input{
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+
+.search-input input{
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
+}
+
+.search-input .autocom-box{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+
+.search-input.active .autocom-box li{
+  display: block;
+}
+.autocom-box li:hover{
+  background: #f2f2f2;
+}
+
+.search-input .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+}
+.searchform{
+    width: 26%;
+    margin: auto;
+}
+.submit-btn{
+    cursor: pointer;
+    width: 100px;
+}
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+}
+.flex-movie{
+    display: flex;
+    justify-content: space-between;
+    height: 50vh;
+    width: 70vw;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.movie-box{
+    flex: 1 0 21%; /* explanation below */
+    margin: 5px;
+}
+.card{
+    position: relative;
+    background: #000;
+    width: 300px;
+    height: 330px;
+    font-family: 'PT Sans', sans-serif;
+    overflow: hidden;
+    border-radius: 14px;
+}
+.card .poster{
+    overflow: hidden;
+}
+.card .poster:before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(0deg, #000 30%, transparent);
+    transition: 0.2s;
+    z-index: 1;
+}
+.card .poster img{
+    width: 100%;
+}
+.details{
+    position: absolute;
+    padding: 20px;
+    width: 100%;
+    height: 80%;
+    bottom: -140px;
+    left: 0;
+    box-sizing: border-box;
+    transition: 0.05s;
+    z-index: 2;
+}
+.card:hover .details{
+    bottom: 0;
+}
+.details h3{
+    color: #FFD369;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.details h3 span{
+    font-size: 14px;
+    color: #ff9800;
+}
+.tags{
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.tags span{
+    padding: 4px 7px;
+    margin-right: 2px;
+    color: #fff;
+    display: inline-block;
+    border-radius: 4px;
+}
+.tags .tag1{
+    background: #7206f7;
+}
+.tags .tag2{
+    background: #f70661;
+}
+.info p{
+    margin: 15px 0px 7px;
+    color: #fff;    
+}
+.watch{
+    font-size: 15px;
+    position: relative;
+    text-decoration: none;
+    padding: 7px 7px;
+    border-radius: 7px;
+    margin-top: 7px;
+    background: none;
+    border:2px solid #DA0037;
+    color: #EEEEEE;
+}
+.watch:hover{
+    border:2px solid #FFD369;
+    padding: 8px 8px;
+    color: #f3e76a;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+@media screen and (max-width:1310px) {
+    .flex-movie{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 400px;
+        height: 350px;
+        margin: 7px;
+    }
+    .details{
+        position: absolute;
+        padding: 20px;
+        width: 100%;
+        height: 80%;
+        bottom: -160px;
+        left: 0;
+        box-sizing: border-box;
+        transition: 0.05s;
+        z-index: 2;
+    }
+    .nav1{
+        width: 50%;
+    }
+    .nav2{
+        width: 30%;
+    }
+    .flex-col1{
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+    }
+    .g{
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+#moviename{
+    color: #DA0037;
+}
+@media screen and (max-width:500px) {
+    .flex-movie{
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav1{
+        width: 50%;
+    }
+    .nav2{
+        width: 50%;
+    }
+    .nav2 p{
+        font-size: 13px;
+    }
+    .nav2 a{
+        font-size: 10px;
+    }
+    #navhead{
+        font-size: 17px;
+        width: 200px;
+    }
+    .card{
+        width: 300px;
+    }
+    .details{
+        position: absolute;
+        padding: 20px;
+        width: 100%;
+        height: 80%;
+        bottom: -160px;
+    }
+    .details h3{
+        font-size: 18px;
+    }
+    .tag1{
+        font-size: 14px;
+    }
+    .watch{
+        font-size: 14px;
+    }
+    .info{
+        font-size: 12px;
+    }
+    .search-input .icon{
+        height: 40px;
+        width: 40px;
+    }
+    .searchhead{
+        font-size: 20px;
+    }
+    .wrapper{
+        max-width: 200px;
+        margin: 20px auto;
+    }
+    .search-input input{
+        height: 30px;
+        width: 100%;
+    } 
+    .g{
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
